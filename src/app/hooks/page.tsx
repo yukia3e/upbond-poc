@@ -17,6 +17,9 @@ export default function Hooks() {
     isCopy,
     txResult,
     bcState,
+    userInfo,
+    isShowUserInfo,
+    showBc,
     signIn,
     signOut,
     getUser,
@@ -26,11 +29,6 @@ export default function Hooks() {
     deploy,
     setIsCopy
   } = useUpbond();
-  const [userInfo, setUserInfo] = useState<UserInfo | null | undefined>(null);
-  const [isShowUserInfo, setIsShowUserInfo] = useState(false);
-  const [showBc, setShowBc] = useState(false);
-
-  const _upbond = upbondServices.upbond.provider;
 
   return (
     <div className="mx-auto max-w-4xl sm:px-6 lg:px-8">

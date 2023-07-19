@@ -306,8 +306,6 @@ export default function useUpbond() {
   };
 
   return {
-    upbond,
-    upbondProvider,
     account,
     loading,
     signInfo,
@@ -315,6 +313,9 @@ export default function useUpbond() {
     isCopy,
     txResult,
     bcState,
+    userInfo,
+    isShowUserInfo,
+    showBc,
     signIn,
     signOut,
     getUser,
