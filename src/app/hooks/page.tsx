@@ -9,7 +9,23 @@ import SpinnerLoading from "@/components/SpinnerLoading";
 import useUpbond from '@/hooks/useUpbond';
 
 export default function Hooks() {
-  const { upbond, upbondProvider, account, loading, signIn, signOut, signInfo, btnLoading, isCopy, txResult, bcState, getUser, getBlockchainInfo, signTransaction, signWeb3Token, deploy, setIsCopy } = useUpbond();
+  const {
+    account,
+    loading,
+    signInfo,
+    btnLoading,
+    isCopy,
+    txResult,
+    bcState,
+    signIn,
+    signOut,
+    getUser,
+    getBlockchainInfo,
+    signTransaction,
+    signWeb3Token,
+    deploy,
+    setIsCopy
+  } = useUpbond();
   const [userInfo, setUserInfo] = useState<UserInfo | null | undefined>(null);
   const [isShowUserInfo, setIsShowUserInfo] = useState(false);
   const [showBc, setShowBc] = useState(false);
@@ -58,7 +74,7 @@ export default function Hooks() {
                 type="button"
                 disabled={btnLoading}
                 className="items-center px-4 py-2 border border-transparent text-sm font-medium rounded-xl shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                onClick={async () => await upbondServices.logout()}
+                onClick={signOut}
               >
                 Logout
               </button>

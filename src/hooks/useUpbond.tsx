@@ -305,5 +305,23 @@ export default function useUpbond() {
     await upbondServices.logout();
   };
 
-  return { upbond, upbondProvider, account, loading, signIn, signOut, signInfo, btnLoading, isCopy, txResult, bcState, getUser, getBlockchainInfo, signTransaction, signWeb3Token, deploy, setIsCopy };
+  return {
+    upbond,
+    upbondProvider,
+    account,
+    loading,
+    signInfo,
+    btnLoading,
+    isCopy,
+    txResult,
+    bcState,
+    signIn,
+    signOut,
+    getUser,
+    getBlockchainInfo,
+    signTransaction,
+    signWeb3Token,
+    deploy,
+    setIsCopy
+  };
 }
