@@ -16,7 +16,7 @@ dependencies:
     version: 18.2.7
   '@upbond/upbond-embed':
     specifier: ^1.3.10
-    version: 1.3.10(@babel/runtime@7.22.6)(bufferutil@4.0.7)(react@18.2.0)(tslib@2.4.1)(utf-8-validate@6.0.3)
+    version: 1.3.10(@babel/runtime@7.22.6)(bufferutil@4.0.7)(react@18.2.0)(tslib@2.4.1)(utf-8-validate@5.0.10)
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.26)
@@ -34,7 +34,7 @@ dependencies:
     version: 13.4.10(eslint@8.45.0)(typescript@5.1.6)
   ethers:
     specifier: ^6.6.4
-    version: 6.6.4(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+    version: 6.6.4(bufferutil@4.0.7)(utf-8-validate@5.0.10)
   next:
     specifier: 13.4.10
     version: 13.4.10(react-dom@18.2.0)(react@18.2.0)
@@ -50,6 +50,9 @@ dependencies:
   react-hot-toast:
     specifier: ^2.4.1
     version: 2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
+  siwe:
+    specifier: ^2.1.4
+    version: 2.1.4(ethers@6.6.4)
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
@@ -57,11 +60,11 @@ dependencies:
     specifier: 5.1.6
     version: 5.1.6
   utf-8-validate:
-    specifier: ^6.0.3
-    version: 6.0.3
+    specifier: ^5.0.2
+    version: 5.0.10
   web3:
     specifier: ^4.0.3
-    version: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+    version: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
   web3-token:
     specifier: ^1.0.6
     version: 1.0.6(react@18.2.0)
@@ -313,7 +316,7 @@ packages:
       '@ethersproject/logger': 5.7.0
     dev: false
 
-  /@ethersproject/providers@5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /@ethersproject/providers@5.7.2(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-g34EWZ1WWAVgr4aptGlVBF8mhl3VWjv+8hoAnzStu8Ah22VHBsuGzP17eb6xDVRzw895G4W7vvx60lFFur/1Rg==}
     dependencies:
       '@ethersproject/abstract-provider': 5.7.0
@@ -335,7 +338,7 @@ packages:
       '@ethersproject/transactions': 5.7.0
       '@ethersproject/web': 5.7.1
       bech32: 1.1.4
-      ws: 7.4.6(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      ws: 7.4.6(bufferutil@4.0.7)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -771,6 +774,36 @@ packages:
 
   /@socket.io/component-emitter@3.1.0:
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
+    dev: false
+
+  /@spruceid/siwe-parser@2.0.2:
+    resolution: {integrity: sha512-9WuA0ios2537cWYu39MMeH0O2KdrMKgKlOBUTWRTXQjCYu5B+mHCA0JkCbFaJ/0EjxoVIcYCXIW/DoPEpw+PqA==}
+    dependencies:
+      '@noble/hashes': 1.3.1
+      apg-js: 4.1.3
+      uri-js: 4.4.1
+      valid-url: 1.0.9
+    dev: false
+
+  /@stablelib/binary@1.0.1:
+    resolution: {integrity: sha512-ClJWvmL6UBM/wjkvv/7m5VP3GMr9t0osr4yVgLZsLCOz4hGN9gIAFEqnJ0TsSMAN+n840nf2cHZnA5/KFqHC7Q==}
+    dependencies:
+      '@stablelib/int': 1.0.1
+    dev: false
+
+  /@stablelib/int@1.0.1:
+    resolution: {integrity: sha512-byr69X/sDtDiIjIV6m4roLVWnNNlRGzsvxw+agj8CIEazqWGOQp2dTYgQhtyVXV9wpO6WyXRQUzLV/JRNumT2w==}
+    dev: false
+
+  /@stablelib/random@1.0.2:
+    resolution: {integrity: sha512-rIsE83Xpb7clHPVRlBj8qNe5L8ISQOzjghYQm/dZ7VaM2KHYwMW5adjQjrzTZCchFnNCNhkwtnOBa9HTMJCI8w==}
+    dependencies:
+      '@stablelib/binary': 1.0.1
+      '@stablelib/wipe': 1.0.1
+    dev: false
+
+  /@stablelib/wipe@1.0.1:
+    resolution: {integrity: sha512-WfqfX/eXGiAd3RJe4VU2snh/ZPwtSjLG4ynQ/vYzvghTh7dHFcI1wl+nrkWG6lGhukOxOsUHfv8dUXr58D0ayg==}
     dev: false
 
   /@stdlib/array-float32@0.0.6:
@@ -1474,7 +1507,7 @@ packages:
       tslib: 2.6.0
     dev: false
 
-  /@toruslabs/broadcast-channel@6.3.1(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /@toruslabs/broadcast-channel@6.3.1(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-BEtJQ+9bMfFoGuCsp5NmxyY+C980Ho+3BZIKSiYwRtl5qymJ+jMX5lsoCppoQblcb34dP6FwEjeFw80Y9QC/rw==}
     dependencies:
       '@babel/runtime': 7.22.6
@@ -1483,7 +1516,7 @@ packages:
       bowser: 2.11.0
       loglevel: 1.8.1
       oblivious-set: 1.1.1
-      socket.io-client: 4.7.1(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      socket.io-client: 4.7.1(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       unload: 2.4.1
     transitivePeerDependencies:
       - '@sentry/types'
@@ -1728,7 +1761,7 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: false
 
-  /@upbond/upbond-embed@1.3.10(@babel/runtime@7.22.6)(bufferutil@4.0.7)(react@18.2.0)(tslib@2.4.1)(utf-8-validate@6.0.3):
+  /@upbond/upbond-embed@1.3.10(@babel/runtime@7.22.6)(bufferutil@4.0.7)(react@18.2.0)(tslib@2.4.1)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-hQhWzpWDXBneHXyXf41z2ikLq4PxrywFQ22CLmfHsWZPA0tXDpA5G2hk59em7rEkffjlH5cFsThxafWiGKrlDw==}
     engines: {node: '>=14.17.0', npm: '>=6.x'}
     peerDependencies:
@@ -1738,7 +1771,7 @@ packages:
       '@babel/runtime': 7.22.6
       '@metamask/obs-store': 7.0.0
       '@rashtaurigae/encryption-utils': 2.0.1(tslib@2.4.1)
-      '@toruslabs/broadcast-channel': 6.3.1(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      '@toruslabs/broadcast-channel': 6.3.1(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       '@toruslabs/http-helpers': 3.4.0(@babel/runtime@7.22.6)
       '@toruslabs/openlogin': 2.13.0(@babel/runtime@7.22.6)
       '@toruslabs/openlogin-jrpc': 2.13.0(@babel/runtime@7.22.6)
@@ -1749,7 +1782,7 @@ packages:
       end-of-stream: 1.4.4
       eth-rpc-errors: 4.0.3
       ethereumjs-util: 7.1.5
-      ethers: 5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      ethers: 5.7.2(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       events: 3.3.0
       fast-deep-equal: 3.1.3
       is-stream: 2.0.1
@@ -1850,6 +1883,10 @@ packages:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+    dev: false
+
+  /apg-js@4.1.3:
+    resolution: {integrity: sha512-XYyDcoBho8OpnWPRnedMwyL+76ovCtsESerHZEfY39dO4IrEqN97mdEYkOyHa0XTX5+3+U5FmpqPLttK0f7n6g==}
     dev: false
 
   /arg@5.0.2:
@@ -2538,13 +2575,13 @@ packages:
       once: 1.4.0
     dev: false
 
-  /engine.io-client@6.5.1(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /engine.io-client@6.5.1(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-hE5wKXH8Ru4L19MbM1GgYV/2Qo54JSMh1rlJbfpa40bEWkCKNo3ol2eOtGmowcr+ysgbI7+SGL+by42Q3pt/Ng==}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
       debug: 4.3.4
       engine.io-parser: 5.1.0
-      ws: 8.11.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      ws: 8.11.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       xmlhttprequest-ssl: 2.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -2972,7 +3009,7 @@ packages:
       rlp: 2.2.7
     dev: false
 
-  /ethers@5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /ethers@5.7.2(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg==}
     dependencies:
       '@ethersproject/abi': 5.7.0
@@ -2993,7 +3030,7 @@ packages:
       '@ethersproject/networks': 5.7.1
       '@ethersproject/pbkdf2': 5.7.0
       '@ethersproject/properties': 5.7.0
-      '@ethersproject/providers': 5.7.2(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      '@ethersproject/providers': 5.7.2(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       '@ethersproject/random': 5.7.0
       '@ethersproject/rlp': 5.7.0
       '@ethersproject/sha2': 5.7.0
@@ -3010,7 +3047,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /ethers@6.6.4(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /ethers@6.6.4(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-r3myN2hEnydmu23iiIj5kjWnCh5JNzlqrE/z+Kw5UqH173F+JOWzU6qkFB4HVC50epgxzKSL2Hq1oNXA877vwQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
@@ -3020,7 +3057,7 @@ packages:
       '@types/node': 18.15.13
       aes-js: 4.0.0-beta.5
       tslib: 2.4.0
-      ws: 8.5.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      ws: 8.5.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -3702,7 +3739,7 @@ packages:
     peerDependencies:
       ws: '*'
     dependencies:
-      ws: 8.11.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      ws: 8.11.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
     dev: false
 
   /jiti@1.19.1:
@@ -4728,6 +4765,18 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: false
 
+  /siwe@2.1.4(ethers@6.6.4):
+    resolution: {integrity: sha512-Dke1Qqa3mgiLm3vjqw/+SQ7dl8WV/Pfk3AlQBF94cBFydTYhztngqYrikzE3X5UTsJ6565dfVbQptszsuYZNYg==}
+    peerDependencies:
+      ethers: ^5.6.8 || ^6.0.8
+    dependencies:
+      '@spruceid/siwe-parser': 2.0.2
+      '@stablelib/random': 1.0.2
+      ethers: 6.6.4(bufferutil@4.0.7)(utf-8-validate@5.0.10)
+      uri-js: 4.4.1
+      valid-url: 1.0.9
+    dev: false
+
   /sjcl@1.0.8:
     resolution: {integrity: sha512-LzIjEQ0S0DpIgnxMEayM1rq9aGwGRG4OnZhCdjx7glTaJtf4zRfpg87ImfjSJjoW9vKpagd82McDOwbRT5kQKQ==}
     dev: false
@@ -4742,13 +4791,13 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /socket.io-client@4.7.1(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /socket.io-client@4.7.1(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-Qk3Xj8ekbnzKu3faejo4wk2MzXA029XppiXtTF/PkbTg+fcwaTw1PlDrTrrrU4mKoYC4dvlApOnSeyLCKwek2w==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
       debug: 4.3.4
-      engine.io-client: 6.5.1(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      engine.io-client: 6.5.1(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       socket.io-parser: 4.2.4
     transitivePeerDependencies:
       - bufferutil
@@ -5141,8 +5190,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /utf-8-validate@6.0.3:
-    resolution: {integrity: sha512-uIuGf9TWQ/y+0Lp+KGZCMuJWc3N9BHA+l/UmHd/oUHwJJDeysyTRxNQVkbzsIWfGFbRe3OcgML/i0mvVRPOyDA==}
+  /utf-8-validate@5.0.10:
+    resolution: {integrity: sha512-Z6czzLq4u8fPOyx7TU6X3dvUZVvoJmxSQ+IcrlmagKhilxlhZgxPK6C5Jqbkw1IDUmFTM+cz9QDnnLTwDz/2gQ==}
     engines: {node: '>=6.14.2'}
     requiresBuild: true
     dependencies:
@@ -5167,6 +5216,10 @@ packages:
       which-typed-array: 1.1.11
     dev: false
 
+  /valid-url@1.0.9:
+    resolution: {integrity: sha512-QQDsV8OnSf5Uc30CKSwG9lnhMPe6exHtTXLRYX8uMwKENy640pU+2BgBL0LRbDh/eYRahNCS7aewCx0wf3NYVA==}
+    dev: false
+
   /valtio@1.10.5(react@18.2.0):
     resolution: {integrity: sha512-jTp0k63VXf4r5hPoaC6a6LCG4POkVSh629WLi1+d5PlajLsbynTMd7qAgEiOSPxzoX5iNvbN7iZ/k/g29wrNiQ==}
     engines: {node: '>=12.20.0'}
@@ -5189,14 +5242,14 @@ packages:
       graceful-fs: 4.2.11
     dev: false
 
-  /web3-core@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3-core@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-KJaH1+ajm/gelvhImkXZx8HrBaGZDERqhOCRpikuwReVDTf4X3TlXqF+oKt153qf5HUXWR4CUL6NkNKNQWjhbA==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
       web3-errors: 1.0.2
       web3-eth-iban: 4.0.3
       web3-providers-http: 4.0.3(encoding@0.1.13)
-      web3-providers-ws: 4.0.3(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      web3-providers-ws: 4.0.3(bufferutil@4.0.7)(utf-8-validate@5.0.10)
       web3-types: 1.0.2
       web3-utils: 4.0.3
       web3-validator: 1.0.2
@@ -5239,13 +5292,13 @@ packages:
       web3-validator: 1.0.2
     dev: false
 
-  /web3-eth-contract@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3-eth-contract@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-x8YsIVVUeONwLCnUmswk5KD3luYxaKuN/xnSzxpb8fE4/KBA6eJswYcIGPrK9QILrVR26yDV/QQpgLU1IJS14g==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
-      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-errors: 1.0.2
-      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-eth-abi: 4.0.3
       web3-types: 1.0.2
       web3-utils: 4.0.3
@@ -5256,16 +5309,16 @@ packages:
       - utf-8-validate
     dev: false
 
-  /web3-eth-ens@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3-eth-ens@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-1tk1WWJB6lsViRFxHR9kt8qgfMV0cySeNBa8H/bZ9/HZ1G8L/c2cboVrG4D0QsPO1im1jQl4Cf3ceKH0PW1KZg==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
       '@adraffy/ens-normalize': 1.9.2
-      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-errors: 1.0.2
-      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-eth-contract: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-net: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-eth-contract: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-net: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-types: 1.0.2
       web3-utils: 4.0.3
       web3-validator: 1.0.2
@@ -5285,13 +5338,13 @@ packages:
       web3-validator: 1.0.2
     dev: false
 
-  /web3-eth-personal@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3-eth-personal@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-Gugz45w/D4wlUNbUth8iHWkv0c5fFZGWZqFvpACJul0z9h0Ou8HzuJMUv3U0xFOQJF5fniVegfp6l0FJQ3hGrQ==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
-      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-types: 1.0.2
       web3-utils: 4.0.3
       web3-validator: 1.0.2
@@ -5301,18 +5354,18 @@ packages:
       - utf-8-validate
     dev: false
 
-  /web3-eth@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3-eth@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-4t1+lpqzk3ljubr0CKE9Ila82p2Pim6Bn7ZIruVfMt9AOA5wL6M0OeMTy0fWBODLJiZJ7R77Ugm0kvEVWD3lqg==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
       setimmediate: 1.0.5
-      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-errors: 1.0.2
       web3-eth-abi: 4.0.3
       web3-eth-accounts: 4.0.3
-      web3-net: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-providers-ws: 4.0.3(bufferutil@4.0.7)(utf-8-validate@6.0.3)
-      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-net: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-providers-ws: 4.0.3(bufferutil@4.0.7)(utf-8-validate@5.0.10)
+      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-types: 1.0.2
       web3-utils: 4.0.3
       web3-validator: 1.0.2
@@ -5322,12 +5375,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /web3-net@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3-net@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-qe+stvVgYhO8AiPgDykZW5gS4mZ3GRWdQ8xn3eTvderresIMvdZYSAoUla2jWl1CgpcqzaoOSO9Pf8t43fr8SA==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
-      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-types: 1.0.2
       web3-utils: 4.0.3
     transitivePeerDependencies:
@@ -5359,7 +5412,7 @@ packages:
     dev: false
     optional: true
 
-  /web3-providers-ws@4.0.3(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /web3-providers-ws@4.0.3(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-V2bYiMvhv+xBYxFdf8V1zGTwhJoAkBQNMECVGNjQIz1qBKuqu6hXHasmkYSJV780LD6qoL58KlfTggjf4SUSaA==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
@@ -5368,17 +5421,17 @@ packages:
       web3-errors: 1.0.2
       web3-types: 1.0.2
       web3-utils: 4.0.3
-      ws: 8.11.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
+      ws: 8.11.0(bufferutil@4.0.7)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     dev: false
 
-  /web3-rpc-methods@1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3-rpc-methods@1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-VhLHvgR62JUNgo0op8hP4LcRkvdF0WaHD9xhcEKGLcri9VfYvR1yTZ3CVh6NTgRCmfDePObbp5blHfbla1cC5Q==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
-      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-types: 1.0.2
       web3-validator: 1.0.2
     transitivePeerDependencies:
@@ -5440,23 +5493,23 @@ packages:
       web3-types: 1.0.2
     dev: false
 
-  /web3@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3):
+  /web3@4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-rUMxui5f52yPWjiMRQV6xqIrTQSovYM2CNhl57y+xj/fGXNLbI1D5FsLPnUMZjMaFHJBTteaBxq/sTEaw/1jNA==}
     engines: {node: '>=14.0.0', npm: '>=6.12.0'}
     dependencies:
-      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-core: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-errors: 1.0.2
-      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-eth: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-eth-abi: 4.0.3
       web3-eth-accounts: 4.0.3
-      web3-eth-contract: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-eth-ens: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-eth-contract: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-eth-ens: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-eth-iban: 4.0.3
-      web3-eth-personal: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
-      web3-net: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-eth-personal: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      web3-net: 4.0.3(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-providers-http: 4.0.3(encoding@0.1.13)
-      web3-providers-ws: 4.0.3(bufferutil@4.0.7)(utf-8-validate@6.0.3)
-      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@6.0.3)
+      web3-providers-ws: 4.0.3(bufferutil@4.0.7)(utf-8-validate@5.0.10)
+      web3-rpc-methods: 1.0.2(bufferutil@4.0.7)(encoding@0.1.13)(utf-8-validate@5.0.10)
       web3-types: 1.0.2
       web3-utils: 4.0.3
       web3-validator: 1.0.2
@@ -5523,7 +5576,7 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: false
 
-  /ws@7.4.6(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /ws@7.4.6(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-YmhHDO4MzaDLB+M9ym/mDA5z0naX8j7SIlT8f8z+I0VtzsRbekxEutHSme7NPS2qE8StCYQNUnfWdXta/Yu85A==}
     engines: {node: '>=8.3.0'}
     peerDependencies:
@@ -5536,10 +5589,10 @@ packages:
         optional: true
     dependencies:
       bufferutil: 4.0.7
-      utf-8-validate: 6.0.3
+      utf-8-validate: 5.0.10
     dev: false
 
-  /ws@8.11.0(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /ws@8.11.0(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -5552,10 +5605,10 @@ packages:
         optional: true
     dependencies:
       bufferutil: 4.0.7
-      utf-8-validate: 6.0.3
+      utf-8-validate: 5.0.10
     dev: false
 
-  /ws@8.5.0(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+  /ws@8.5.0(bufferutil@4.0.7)(utf-8-validate@5.0.10):
     resolution: {integrity: sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -5568,7 +5621,7 @@ packages:
         optional: true
     dependencies:
       bufferutil: 4.0.7
-      utf-8-validate: 6.0.3
+      utf-8-validate: 5.0.10
     dev: false
 
   /xmlhttprequest-ssl@2.0.0:

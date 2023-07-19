@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from "react";
 import Upbond, { UserInfo } from "@upbond/upbond-embed";
 import Web3, { TransactionReceipt } from "web3";
@@ -47,7 +49,7 @@ export default function useUpbond() {
       console.log(`Initializing Upbond...`);
       setLoading(true);
       try {
-        await upbondServices.init("/hooks");
+        await upbondServices.init("/hooks-redirect");
       } catch (error) {
         console.error(`Error initialization: `, error);
       }
@@ -302,6 +304,7 @@ export default function useUpbond() {
   };
 
   return {
+    upbondProvider,
     account,
     loading,
     signInfo,
