@@ -93,7 +93,7 @@ export default function useUpbond() {
     console.log(`Blockchain info fetched!`)
   };
 
-  const login = async () => {
+  const signIn = async () => {
     console.log("login started")
     setLoading(true);
     try {
@@ -295,10 +295,6 @@ export default function useUpbond() {
         )
       );
     }
-  };
-
-  const signIn = async () => {
-    await upbondServices.login();
   };
 
   const signOut = async () => {
