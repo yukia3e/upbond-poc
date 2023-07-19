@@ -1,10 +1,6 @@
 'use client';
 
-import upbondServices from '@/lib/UpbondEmbed';
-import { UserInfo } from '@upbond/upbond-embed';
-import { useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
-import Web3, { TransactionReceipt } from 'web3';
+import { Toaster } from 'react-hot-toast';
 import SpinnerLoading from "@/components/SpinnerLoading";
 import useUpbond from '@/hooks/useUpbond';
 
