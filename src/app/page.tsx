@@ -176,7 +176,7 @@ export default function Home() {
         setBtnLoading(false);
         return;
       }
-      const signedMsg = await upbondServices.signWeb3Token(account[0]);
+      const signedMsg = await upbondServices.signWeb3Token();
       if (signedMsg) {
         setBtnLoading(false);
         setSignInfo(`${signedMsg}`);
