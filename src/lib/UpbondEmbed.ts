@@ -27,7 +27,20 @@ class UpbondEmbed {
     if (this.upbond instanceof Upbond) {
       await this.upbond.init({
         buildEnv: this.env as BuildEnv,
+        widgetConfig: {
+          showAfterLoggedIn: false,
+          showBeforeLoggedIn: false,
+        },
         dappRedirectUri: `${window.location.origin}/${dappRedirectPath}`,
+        network: {
+          host: "mumbai",
+          chainId: 80001,
+          networkName: "Mumbai",
+          blockExplorer: "",
+          ticker: "MUMBAI",
+          tickerName: "MUMBAI",
+          rpcUrl: "https://polygon-testnet.public.blastapi.io/",
+        },
         whiteLabel: {
           walletTheme: {
             logo: "https://i.ibb.co/L6vHB5d/company-logo-sample.png",
@@ -130,7 +143,7 @@ class UpbondEmbed {
       }
     }
   }
-  async signWeb3Token(account: string) {
+  async signWeb3Token() {
     console.log('UPBOND Embed Signing web3 token...')
     try {
       const ether = new ethers.BrowserProvider(this.upbond.provider);
