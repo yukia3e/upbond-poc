@@ -5,7 +5,7 @@ import upbondServices from "@/lib/UpbondEmbed";
 import toast from "react-hot-toast";
 
 export default function useUpbond() {
-  const [upbond, _setUpbond] = useState<Upbond>(new Upbond({}));
+  const [upbond] = useState<Upbond>(new Upbond({}));
   const [loading, setLoading] = useState<boolean>(false);
   const [account, setAccount] = useState<string[] | null>(null);
   const [userInfo, setUserInfo] = useState<UserInfo | null | undefined>(null);
